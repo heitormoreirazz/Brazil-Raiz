@@ -1,314 +1,284 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description"
-        content="Brasil Raiz: eventos, cultura, natureza e experiências que conectam você às raízes do Brasil." />
-    <meta name="theme-color" content="#00A859" />
-    <title>Brasil Raiz | Cultura, conexão e experiências</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap"
-        rel="stylesheet" />
-    <link rel="stylesheet" href="/style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brasil Raiz — Nossa cultura, nossas vozes</title>
+<meta name="description" content="Brasil Raiz é dedicada à valorização, preservação e difusão da diversidade cultural brasileira, conectando pessoas às suas origens através da juventude.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700;800&family=Permanent+Marker&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <a class="skip-link" href="#conteudo">Ir para o conteúdo principal</a>
 
-    <header class="site-header">
-        <a class="brand" href="#inicio" aria-label="Brasil Raiz, início">
-            <span class="brand-mark" aria-hidden="true">✳</span>
-            <span>Brasil<br /><em>Raiz</em></span>
-        </a>
+<!-- sprite com o simbolo da marca, reaproveitado em varios pontos da pagina -->
+<svg style="display:none" aria-hidden="true">
+  <symbol id="badge-raiz" viewBox="0 0 600 600">
+    <g transform="translate(300,300)">
+      <g>
+        <rect x="-7" y="-231" width="14" height="41" fill="#E85D2C" transform="rotate(0)"/>
+        <rect x="-7" y="-214" width="14" height="24" fill="#F7B733" transform="rotate(18)"/>
+        <rect x="-7" y="-231" width="14" height="41" fill="#2FA84F" transform="rotate(36)"/>
+        <rect x="-7" y="-214" width="14" height="24" fill="#1D6FA5" transform="rotate(54)"/>
+        <rect x="-7" y="-231" width="14" height="41" fill="#E85D2C" transform="rotate(72)"/>
+        <rect x="-7" y="-214" width="14" height="24" fill="#F7B733" transform="rotate(90)"/>
+        <rect x="-7" y="-231" width="14" height="41" fill="#2FA84F" transform="rotate(108)"/>
+        <rect x="-7" y="-214" width="14" height="24" fill="#1D6FA5" transform="rotate(126)"/>
+        <rect x="-7" y="-231" width="14" height="41" fill="#E85D2C" transform="rotate(144)"/>
+        <rect x="-7" y="-214" width="14" height="24" fill="#F7B733" transform="rotate(162)"/>
+        <rect x="-7" y="-231" width="14" height="41" fill="#2FA84F" transform="rotate(180)"/>
+        <rect x="-7" y="-214" width="14" height="24" fill="#1D6FA5" transform="rotate(198)"/>
+        <rect x="-7" y="-231" width="14" height="41" fill="#E85D2C" transform="rotate(216)"/>
+        <rect x="-7" y="-214" width="14" height="24" fill="#F7B733" transform="rotate(234)"/>
+        <rect x="-7" y="-231" width="14" height="41" fill="#2FA84F" transform="rotate(252)"/>
+        <rect x="-7" y="-214" width="14" height="24" fill="#1D6FA5" transform="rotate(270)"/>
+        <rect x="-7" y="-231" width="14" height="41" fill="#E85D2C" transform="rotate(288)"/>
+        <rect x="-7" y="-214" width="14" height="24" fill="#F7B733" transform="rotate(306)"/>
+        <rect x="-7" y="-231" width="14" height="41" fill="#2FA84F" transform="rotate(324)"/>
+        <rect x="-7" y="-214" width="14" height="24" fill="#1D6FA5" transform="rotate(342)"/>
+      </g>
+      <circle r="187" fill="none" stroke="#1A1310" stroke-width="6"/>
+      <circle r="169" fill="#FBF6EC" stroke="#F7B733" stroke-width="4"/>
+      <g stroke="#E85D2C" stroke-width="16" stroke-linecap="round" fill="none">
+        <path d="M0,51 C-29,85 -56,106 -77,140"/>
+        <path d="M0,51 L0,140"/>
+        <path d="M0,51 C29,85 56,106 77,140"/>
+      </g>
+      <line x1="0" y1="51" x2="0" y2="-90" stroke="#1A1310" stroke-width="21" stroke-linecap="round"/>
+      <g transform="translate(0,-90)">
+        <g transform="rotate(-28)"><path d="M0,-7 C29,-22 34,-60 7,-85 C-19,-60 -24,-22 0,-7 Z" fill="#2FA84F"/></g>
+        <g transform="rotate(96)"><path d="M0,-7 C29,-22 34,-60 7,-85 C-19,-60 -24,-22 0,-7 Z" fill="#1D6FA5"/></g>
+        <g transform="rotate(-152)"><path d="M0,-7 C29,-22 34,-60 7,-85 C-19,-60 -24,-22 0,-7 Z" fill="#F7B733"/></g>
+      </g>
+      <g transform="translate(214,-166) rotate(12)" fill="#F7B733">
+        <path d="M0,-31 L10,-7 L34,0 L10,7 L0,31 L-10,7 L-34,0 L-10,-7 Z"/>
+      </g>
+    </g>
+  </symbol>
+</svg>
 
-        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"
-            aria-controls="main-nav">
-            <span></span><span></span>
-        </button>
+<!-- ====================== HEADER ====================== -->
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="#hero" class="logo" aria-label="Brasil Raiz — início">
+      <svg class="logo__badge" viewBox="0 0 600 600"><use href="#badge-raiz"/></svg>
+      <span class="logo__type">BRASIL <em>Raiz</em></span>
+    </a>
 
-        <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
-            <a href="#inicio">Início</a>
-            <a href="#sobre">Sobre nós</a>
-            <a href="#eventos">Eventos</a>
-            <a href="#depoimentos">Depoimentos</a>
-            <a href="#contato">Contato</a>
-        </nav>
+    <nav class="nav" id="nav">
+      <a href="#sobre">Sobre</a>
+      <a href="#valores">Valores</a>
+      <a href="#eventos">Eventos</a>
+      <a href="#contato" class="nav__cta">Fale com a gente</a>
+    </nav>
 
-        <a class="button button-small button-yellow header-cta" href="#inscricao">Quero participar <span>↗</span></a>
-    </header>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
 
-    <main id="conteudo">
-        <section class="hero" id="inicio" aria-labelledby="hero-title">
-            <div class="hero-copy reveal">
-                <p class="eyebrow light">Cultura • conexão • pertencimento</p>
-                <h1 id="hero-title">Viva experiências que conectam você às <em>raízes do Brasil.</em></h1>
-                <p class="hero-text">Encontros para celebrar a nossa diversidade por meio da música, da arte, da
-                    gastronomia, da natureza e das histórias que nos formam.</p>
-                <div class="hero-actions">
-                    <a class="button button-yellow" href="#eventos">Conheça nossos eventos <span>→</span></a>
-                    <a class="button button-outline-light js-whatsapp" href="#contato">Falar pelo WhatsApp
-                        <span>↗</span></a>
-                </div>
-            </div>
-            <div class="hero-badge" aria-hidden="true">
-                <span>Vem viver</span>
-                <strong>Brasil</strong>
-                <span>de verdade</span>
-            </div>
-            <a class="hero-scroll" href="#sobre"><span>role para descobrir</span><span class="scroll-line"></span></a>
-        </section>
+<main>
 
-        <section class="intro section-pad" id="sobre" aria-labelledby="sobre-title">
-            <div class="intro-heading reveal">
-                <p class="eyebrow">01 / Sobre nós</p>
-                <h2 id="sobre-title">Onde cada encontro vira <em>memória.</em></h2>
-            </div>
-            <div class="intro-content reveal">
-                <p class="large-copy">A Brasil Raiz nasceu para criar pontes: entre pessoas, territórios, talentos e
-                    tudo aquilo que torna o Brasil tão plural.</p>
-                <p>Somos uma empresa de experiências culturais. Criamos eventos acolhedores, vivos e cheios de
-                    significado, valorizando a identidade brasileira e quem mantém as nossas raízes vivas.</p>
-                <a class="text-link" href="#contato">Conheça a nossa história <span>↗</span></a>
-            </div>
-        </section>
-
-        <section class="values section-pad" aria-labelledby="valores-title">
-            <div class="section-intro reveal">
-                <div>
-                    <p class="eyebrow">02 / O que nos move</p>
-                    <h2 id="valores-title">Presença para<br /><em>celebrar.</em></h2>
-                </div>
-                <p class="section-note">Experiências pensadas para sentir, compartilhar e levar consigo.</p>
-            </div>
-            <div class="value-grid">
-                <article class="value-card reveal">
-                    <span class="value-number">01</span><span class="value-icon" aria-hidden="true">◌</span>
-                    <h3>Autenticidade</h3>
-                    <p>Histórias reais, talentos locais e experiências com verdade.</p>
-                </article>
-                <article class="value-card value-card-highlight reveal">
-                    <span class="value-number">02</span><span class="value-icon" aria-hidden="true">✺</span>
-                    <h3>Diversidade</h3>
-                    <p>Um espaço para diferentes vozes, corpos, sotaques e caminhos.</p>
-                </article>
-                <article class="value-card reveal">
-                    <span class="value-number">03</span><span class="value-icon" aria-hidden="true">⌁</span>
-                    <h3>Conexão</h3>
-                    <p>Encontros que aproximam pessoas e fortalecem comunidades.</p>
-                </article>
-                <article class="value-card reveal">
-                    <span class="value-number">04</span><span class="value-icon" aria-hidden="true">♧</span>
-                    <h3>Cuidado</h3>
-                    <p>Relação respeitosa com a natureza, a cultura e cada participante.</p>
-                </article>
-            </div>
-        </section>
-
-        <section class="events section-pad" id="eventos" aria-labelledby="eventos-title">
-            <div class="section-intro reveal">
-                <div>
-                    <p class="eyebrow">03 / Próximos encontros</p>
-                    <h2 id="eventos-title">Vem com a <em>gente.</em></h2>
-                </div>
-                <span class="demo-label">Conteúdo demonstrativo</span>
-            </div>
-            <div class="event-grid">
-                <article class="event-card reveal">
-                    <div class="event-image event-image-one" role="img"
-                        aria-label="Pessoas reunidas em um evento cultural ao ar livre">
-                        <span class="event-category">Cultura &amp; música</span>
-                    </div>
-                    <div class="event-body">
-                        <div class="event-date"><strong>12</strong><span>SET<br />2026</span></div>
-                        <div>
-                            <h3>Roda Brasil</h3>
-                            <p class="event-meta">A definir • 16h • Local a confirmar</p>
-                            <p>Uma tarde de música, histórias e encontros para celebrar a nossa pluralidade.</p>
-                        </div>
-                    </div>
-                    <a class="text-link event-link" href="#inscricao" data-event="Roda Brasil">Quero me inscrever
-                        <span>→</span></a>
-                </article>
-                <article class="event-card reveal">
-                    <div class="event-image event-image-two" role="img"
-                        aria-label="Mesa com elementos de gastronomia brasileira">
-                        <span class="event-category">Gastronomia</span>
-                    </div>
-                    <div class="event-body">
-                        <div class="event-date"><strong>03</strong><span>OUT<br />2026</span></div>
-                        <div>
-                            <h3>Sabores de origem</h3>
-                            <p class="event-meta">A definir • 11h • Local a confirmar</p>
-                            <p>Comida, afeto e saberes que atravessam gerações em uma experiência para todos os
-                                sentidos.</p>
-                        </div>
-                    </div>
-                    <a class="text-link event-link" href="#inscricao" data-event="Sabores de origem">Quero me inscrever
-                        <span>→</span></a>
-                </article>
-                <article class="event-card reveal">
-                    <div class="event-image event-image-three" role="img"
-                        aria-label="Paisagem natural brasileira com vegetação exuberante">
-                        <span class="event-category">Natureza &amp; arte</span>
-                    </div>
-                    <div class="event-body">
-                        <div class="event-date"><strong>24</strong><span>OUT<br />2026</span></div>
-                        <div>
-                            <h3>Raízes em movimento</h3>
-                            <p class="event-meta">A definir • 9h • Local a confirmar</p>
-                            <p>Uma pausa para respirar, criar e se reconectar com a beleza que existe ao nosso redor.
-                            </p>
-                        </div>
-                    </div>
-                    <a class="text-link event-link" href="#inscricao" data-event="Raízes em movimento">Quero me
-                        inscrever <span>→</span></a>
-                </article>
-            </div>
-        </section>
-
-        <section class="quote-band">
-            <p class="eyebrow light">Um Brasil de muitos Brasis</p>
-            <blockquote>“Quando a gente se encontra,<br /><em>a raiz se fortalece.”</em></blockquote>
-            <span class="quote-signature">Brasil Raiz</span>
-        </section>
-
-        <section class="gallery section-pad" id="realizados" aria-labelledby="realizados-title">
-            <div class="section-intro reveal">
-                <div>
-                    <p class="eyebrow">04 / Já vivemos juntos</p>
-                    <h2 id="realizados-title">Memórias que<br /><em>ficam.</em></h2>
-                </div>
-                <p class="section-note">Galeria demonstrativa. As fotos oficiais entram na próxima etapa.</p>
-            </div>
-            <div class="gallery-grid">
-                <button class="gallery-item gallery-one reveal" type="button" data-title="Encontro Brasil Raiz"
-                    aria-label="Ver detalhes do Encontro Brasil Raiz"><span>Encontro Brasil Raiz <small>Ver detalhes
-                            ↗</small></span></button>
-                <button class="gallery-item gallery-two reveal" type="button" data-title="Feira de afetos"
-                    aria-label="Ver detalhes da Feira de afetos"><span>Feira de afetos <small>Ver detalhes
-                            ↗</small></span></button>
-                <button class="gallery-item gallery-three reveal" type="button" data-title="Cultura em roda"
-                    aria-label="Ver detalhes da Cultura em roda"><span>Cultura em roda <small>Ver detalhes
-                            ↗</small></span></button>
-                <button class="gallery-item gallery-four reveal" type="button" data-title="Territórios do Brasil"
-                    aria-label="Ver detalhes de Territórios do Brasil"><span>Territórios do Brasil <small>Ver detalhes
-                            ↗</small></span></button>
-            </div>
-        </section>
-
-        <section class="testimonials section-pad" id="depoimentos" aria-labelledby="depoimentos-title">
-            <div class="section-intro reveal">
-                <div>
-                    <p class="eyebrow">05 / O que dizem</p>
-                    <h2 id="depoimentos-title">Vozes de quem<br /><em>participa.</em></h2>
-                </div>
-                <span class="demo-label">Exemplos para substituir</span>
-            </div>
-            <div class="testimonial-grid">
-                <article class="testimonial reveal">
-                    <div class="stars" aria-label="Avaliação demonstrativa: 5 de 5 estrelas">★★★★★</div>
-                    <blockquote>“[Depoimento demonstrativo] Uma experiência acolhedora, daquelas que fazem a gente se
-                        sentir parte de algo maior.”</blockquote>
-                    <p class="person">Nome da participante <span>Participante — exemplo</span></p>
-                </article>
-                <article class="testimonial testimonial-green reveal">
-                    <div class="stars" aria-label="Avaliação demonstrativa: 5 de 5 estrelas">★★★★★</div>
-                    <blockquote>“[Depoimento demonstrativo] Saí com o coração cheio e vontade de conhecer ainda mais as
-                        histórias do nosso Brasil.”</blockquote>
-                    <p class="person">Nome do participante <span>Participante — exemplo</span></p>
-                </article>
-                <article class="testimonial reveal">
-                    <div class="stars" aria-label="Avaliação demonstrativa: 5 de 5 estrelas">★★★★★</div>
-                    <blockquote>“[Depoimento demonstrativo] Encontro bonito, diverso e feito com cuidado em cada
-                        detalhe.”</blockquote>
-                    <p class="person">Nome da participante <span>Participante — exemplo</span></p>
-                </article>
-            </div>
-        </section>
-
-        <section class="signup section-pad" id="inscricao" aria-labelledby="inscricao-title">
-            <div class="signup-copy reveal">
-                <p class="eyebrow light">06 / Faça parte</p>
-                <h2 id="inscricao-title">Sua próxima<br /><em>história começa aqui.</em></h2>
-                <p>Cadastre-se para receber novidades sobre os próximos encontros da Brasil Raiz.</p>
-            </div>
-            <form class="signup-form reveal" id="signup-form" novalidate>
-                <div class="form-row">
-                    <div class="field"><label for="name">Nome completo <span>*</span></label><input id="name"
-                            name="name" type="text" autocomplete="name" aria-describedby="name-error" required /><small
-                            class="field-error" id="name-error"></small></div>
-                    <div class="field"><label for="email">E-mail <span>*</span></label><input id="email" name="email"
-                            type="email" autocomplete="email" aria-describedby="email-error" required /><small
-                            class="field-error" id="email-error"></small></div>
-                </div>
-                <div class="form-row">
-                    <div class="field"><label for="phone">Telefone <span>*</span></label><input id="phone" name="phone"
-                            type="tel" inputmode="tel" autocomplete="tel" aria-describedby="phone-error"
-                            placeholder="(00) 00000-0000" required /><small class="field-error"
-                            id="phone-error"></small></div>
-                    <div class="field"><label for="event">Evento de interesse <span>*</span></label><select id="event"
-                            name="event" aria-describedby="event-error" required>
-                            <option value="">Selecione um evento</option>
-                            <option>Roda Brasil (demonstração)</option>
-                            <option>Sabores de origem (demonstração)</option>
-                            <option>Raízes em movimento (demonstração)</option>
-                        </select><small class="field-error" id="event-error"></small></div>
-                </div>
-                <div class="field"><label for="message">Mensagem <span>(opcional)</span></label><textarea id="message"
-                        name="message" rows="3"></textarea></div>
-                <label class="checkbox-field"><input id="consent" name="consent" type="checkbox"
-                        aria-describedby="consent-error" required /><span>Quero receber novidades da Brasil Raiz. Li e
-                        concordo com o aviso de privacidade. <span>*</span></span></label>
-                <small class="field-error" id="consent-error"></small>
-                <button class="button button-yellow" type="submit">Quero participar <span>→</span></button>
-                <p class="privacy-note">Seus dados serão usados apenas para responder ao seu contato e enviar novidades,
-                    conforme a LGPD. Nesta demonstração, nada é enviado ou armazenado.</p>
-                <p class="form-feedback" id="form-feedback" role="status" aria-live="polite"></p>
-            </form>
-        </section>
-
-        <section class="final-cta" aria-labelledby="cta-title">
-            <p class="eyebrow">A sua raiz também faz parte</p>
-            <h2 id="cta-title">Faça parte dessa experiência<br />e mantenha suas <em>raízes vivas.</em></h2>
-            <a class="button button-dark" href="#inscricao">Quero participar <span>→</span></a>
-        </section>
-    </main>
-
-    <footer class="site-footer" id="contato">
-        <div class="footer-top">
-            <a class="brand footer-brand" href="#inicio" aria-label="Brasil Raiz, início"><span class="brand-mark"
-                    aria-hidden="true">✳</span><span>Brasil<br /><em>Raiz</em></span></a>
-            <p>Brasil Raiz.<br /><em>Cultura, conexão e experiências que fortalecem nossas origens.</em></p>
-            <div class="footer-links">
-                <div>
-                    <p class="eyebrow">Navegue</p><a href="#sobre">Sobre nós</a><a href="#eventos">Eventos</a><a
-                        href="#depoimentos">Depoimentos</a>
-                </div>
-                <div>
-                    <p class="eyebrow">Fale com a gente</p><a class="js-whatsapp" href="#contato">WhatsApp — inserir
-                        link</a><a href="#contato">E-mail — inserir contato</a><a href="#contato">Instagram — inserir
-                        link</a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom"><span>© 2026 Brasil Raiz</span><span>Conteúdo demonstrativo</span><a
-                href="#contato">Política de privacidade</a></div>
-    </footer>
-
-    <div class="modal" id="detail-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
-        <div class="modal-card"><button class="modal-close" type="button" aria-label="Fechar detalhes">×</button>
-            <p class="eyebrow">Memória Brasil Raiz</p>
-            <h2 id="modal-title">Evento realizado</h2>
-            <p>Esta área receberá fotos, vídeos e a história completa do evento. O conteúdo oficial será adicionado
-                quando for enviado.</p>
-        </div>
+  <!-- ====================== HERO (parallax) ====================== -->
+  <section class="hero" id="hero">
+    <div class="hero__parallax" aria-hidden="true">
+      <div class="hero__layer hero__layer--rays" data-speed="0.15"></div>
+      <div class="hero__layer hero__layer--dot hero__layer--dot1" data-speed="0.35"></div>
+      <div class="hero__layer hero__layer--dot hero__layer--dot2" data-speed="0.5"></div>
+      <div class="hero__layer hero__layer--dot hero__layer--dot3" data-speed="0.25"></div>
     </div>
-    <div class="toast" role="status" aria-live="polite"></div>
-    <script src="script.js"></script>
-</body>
 
+    <div class="container hero__content">
+      <svg class="hero__badge" viewBox="0 0 600 600" data-speed="-0.1"><use href="#badge-raiz"/></svg>
+      <h1 class="hero__title">Nossa cultura,<br>nossas vozes.</h1>
+      <p class="hero__subtitle">
+        A Brasil Raiz é dedicada à valorização, preservação e difusão da rica diversidade
+        cultural brasileira — conectando pessoas às suas origens através de experiências
+        autênticas, eventos culturais e projetos educativos, sob o olhar da juventude.
+      </p>
+      <div class="hero__actions">
+        <a href="#eventos" class="btn btn--primary">Ver nossos eventos</a>
+        <a href="#sobre" class="btn btn--ghost">Conhecer a Brasil Raiz</a>
+      </div>
+    </div>
+
+    <a href="#sobre" class="hero__scroll" aria-label="Rolar para a próxima seção">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- ====================== SOBRE ====================== -->
+  <section class="sobre" id="sobre">
+    <div class="container sobre__grid">
+      <div class="sobre__text">
+        <p class="eyebrow">quem somos</p>
+        <h2>Raízes que constroem o futuro</h2>
+        <p>
+          Inspirados pelas manifestações populares, pelos saberes tradicionais e pela arte
+          de cada região, buscamos fortalecer o sentimento de identidade nacional e promover
+          o desenvolvimento sustentável das comunidades locais.
+        </p>
+        <p>
+          Acreditamos que compreender e celebrar nossas raízes é o caminho para construir
+          um futuro mais consciente, diverso e criativo — um projeto feito por jovens, para jovens.
+        </p>
+      </div>
+
+      <div class="sobre__cards">
+        <div class="mv-card">
+          <span class="mv-card__tag">Missão</span>
+          <p>Tornar a cultura acessível e transformadora, conectando pessoas e territórios
+             para que todas as vozes encontrem expressão.</p>
+        </div>
+        <div class="mv-card mv-card--accent">
+          <span class="mv-card__tag">Visão</span>
+          <p>Ser referência em cultura inclusiva, inspirando um futuro diverso e de pertencimento.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== FAIXA PARALLAX DE RAIZES (divisor) ====================== -->
+  <section class="divisor" aria-hidden="true">
+    <div class="divisor__bg" data-speed="0.2"></div>
+    <div class="divisor__bg divisor__bg--linhas" data-speed="0.4"></div>
+  </section>
+
+  <!-- ====================== VALORES (slide-card) ====================== -->
+  <section class="valores" id="valores">
+    <div class="container">
+      <p class="eyebrow eyebrow--center">o que nos guia</p>
+      <h2 class="section-title section-title--center">Nossos valores</h2>
+
+      <div class="slider" id="valoresSlider">
+        <button class="slider__arrow slider__arrow--prev" id="valoresPrev" aria-label="Valor anterior">‹</button>
+
+        <div class="slider__viewport">
+          <ul class="slider__track" id="valoresTrack">
+            <li class="value-card">
+              <span class="value-card__letter" style="--c:#F7B733">A</span>
+              <h3>Acessibilidade</h3>
+              <p>Cultura aberta para todos.</p>
+            </li>
+            <li class="value-card">
+              <span class="value-card__letter" style="--c:#2FA84F">D</span>
+              <h3>Diversidade</h3>
+              <p>Celebrar o diferente como força criativa.</p>
+            </li>
+            <li class="value-card">
+              <span class="value-card__letter" style="--c:#1D6FA5">E</span>
+              <h3>Escuta</h3>
+              <p>Ouvir para compreender e construir juntos.</p>
+            </li>
+            <li class="value-card">
+              <span class="value-card__letter" style="--c:#E85D2C">P</span>
+              <h3>Pertencimento</h3>
+              <p>Criar espaços onde cada um se reconheça.</p>
+            </li>
+            <li class="value-card">
+              <span class="value-card__letter" style="--c:#1A1310">R</span>
+              <h3>Responsabilidade social</h3>
+              <p>Agir com consciência e impacto positivo.</p>
+            </li>
+          </ul>
+        </div>
+
+        <button class="slider__arrow slider__arrow--next" id="valoresNext" aria-label="Próximo valor">›</button>
+      </div>
+
+      <div class="slider__dots" id="valoresDots"></div>
+    </div>
+  </section>
+
+  <!-- ====================== EVENTOS (slideshow) ====================== -->
+  <section class="eventos" id="eventos">
+    <div class="eventos__parallax-bg" data-speed="0.15" aria-hidden="true"></div>
+
+    <div class="container">
+      <p class="eyebrow eyebrow--center eyebrow--light">o que já vivemos</p>
+      <h2 class="section-title section-title--center section-title--light">Eventos realizados</h2>
+
+      <div class="slideshow" id="eventosSlideshow">
+        <div class="slideshow__viewport" id="eventosViewport">
+
+          <article class="slide is-active">
+            <span class="slide__tag">Evento</span>
+            <span class="slide__date">13 de fevereiro de 2026</span>
+            <h3>Ritmos Brasileiros</h3>
+            <p>Evento de integração com outras turmas: a equipe de marketing apresentou o
+               universo da música sertaneja e suas origens.</p>
+          </article>
+
+          <article class="slide">
+            <span class="slide__tag">Integração</span>
+            <span class="slide__date">20 de fevereiro de 2026</span>
+            <h3>Perfil Express</h3>
+            <p>Dinâmica em times: cada grupo recebia uma dica por vez até acertar o filme,
+               objeto, série ou pessoa em questão.</p>
+          </article>
+
+          <article class="slide">
+            <span class="slide__tag">Parceria</span>
+            <span class="slide__date">27 de março de 2026</span>
+            <h3>Espro que eu vejo</h3>
+            <p>Participação na comemoração dos 47 anos da Espro, com nossa turma conduzindo
+               uma oficina de tsuru.</p>
+          </article>
+
+          <article class="slide">
+            <span class="slide__tag">Projeto</span>
+            <span class="slide__date">2026</span>
+            <h3>O Brasil de cada década</h3>
+            <p>Uma linha do tempo cultural, revisitando moda, música e comportamento de
+               cada década do Brasil.</p>
+          </article>
+
+          <article class="slide">
+            <span class="slide__tag">Projeto</span>
+            <span class="slide__date">2026</span>
+            <h3>Futebol é o Brasil — o laço inquebrável</h3>
+            <p>Um mergulho na relação entre o futebol e a identidade nacional, dentro e
+               fora de campo.</p>
+          </article>
+
+        </div>
+
+        <div class="slideshow__controls">
+          <button id="eventosPrev" aria-label="Evento anterior">‹</button>
+          <div class="slideshow__dots" id="eventosDots"></div>
+          <button id="eventosNext" aria-label="Próximo evento">›</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== CTA FINAL (parallax) ====================== -->
+  <section class="cta" id="contato">
+    <div class="cta__bg" data-speed="0.2" aria-hidden="true"></div>
+    <div class="container cta__content">
+      <h2>Faça parte dessa raiz.</h2>
+      <p>Acompanhe nossos próximos eventos e projetos culturais.</p>
+      <a href="https://www.instagram.com" target="_blank" rel="noopener" class="btn btn--primary">
+        Seguir no Instagram
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ====================== FOOTER ====================== -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <a href="#hero" class="logo logo--footer">
+      <svg class="logo__badge" viewBox="0 0 600 600"><use href="#badge-raiz"/></svg>
+      <span class="logo__type">BRASIL <em>Raiz</em></span>
+    </a>
+    <p>Nossa cultura, nossas vozes.</p>
+    <p class="footer__small">Brasil Raiz — projeto cultural feito por jovens, para jovens.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
 </html>
