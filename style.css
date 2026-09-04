@@ -157,14 +157,14 @@ a {
 }
 
 .logo__badge {
-    width: 42px;
-    height: 42px;
+    width: 70px;
+    height: 70px;
     flex-shrink: 0;
 }
 
 .logo__type {
     font-family: var(--f-titulo);
-    font-size: 22px;
+    font-size: 35px;
     letter-spacing: .5px;
 }
 
