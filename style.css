@@ -379,6 +379,33 @@ a {
     gap: 20px;
 }
 
+.sobre__foto {
+    margin: 0;
+    border-radius: var(--raio);
+    overflow: hidden;
+    border: 1px solid rgba(26, 19, 16, .08);
+    position: relative;
+}
+
+.sobre__foto img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.sobre__foto figcaption {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 10px 16px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(0deg, rgba(26, 19, 16, .75), transparent);
+}
+
 .mv-card {
     background: #fff;
     border: 1px solid rgba(26, 19, 16, .08);
@@ -420,12 +447,12 @@ a {
     position: relative;
     height: 220px;
     overflow: hidden;
-    background: var(--tinta);
+    background: var(--mata);
 }
 
 .divisor__bg {
     position: absolute;
-    inset: -30% 0;
+    inset: -260px 0;
     background: repeating-linear-gradient(115deg, rgba(247, 183, 51, .12) 0 2px, transparent 2px 40px);
     will-change: transform;
 }
@@ -551,14 +578,14 @@ a {
 .eventos {
     position: relative;
     padding: var(--secao-py) 0;
-    background: var(--tinta);
+    background: var(--anil);
     color: var(--papel);
     overflow: hidden;
 }
 
 .eventos__parallax-bg {
     position: absolute;
-    inset: -20% -10%;
+    inset: -260px -150px;
     background:
         radial-gradient(circle at 15% 20%, rgba(232, 93, 44, .35), transparent 40%),
         radial-gradient(circle at 85% 75%, rgba(29, 111, 165, .35), transparent 40%),
@@ -574,17 +601,29 @@ a {
 
 .slideshow__viewport {
     position: relative;
-    min-height: 260px;
+    min-height: 300px;
     background: rgba(251, 246, 236, .06);
     border: 1px solid rgba(251, 246, 236, .15);
     border-radius: var(--raio);
-    padding: 48px;
+    overflow: hidden;
+}
+
+.slide__media {
+    margin: 24px 0 24px 24px;
+}
+
+@media (max-width: 720px) {
+    .slide__media {
+        margin: 24px 24px 0 24px;
+    }
 }
 
 .slide {
     position: absolute;
     inset: 0;
-    padding: 48px;
+    display: flex;
+    align-items: stretch;
+    gap: 32px;
     opacity: 0;
     transform: translateX(24px);
     transition: opacity .5s ease, transform .5s ease;
@@ -596,6 +635,31 @@ a {
     opacity: 1;
     transform: translateX(0);
     pointer-events: auto;
+}
+
+.slide__media {
+    flex: 0 0 38%;
+    border-radius: 14px;
+    overflow: hidden;
+    align-self: center;
+    box-shadow: 0 16px 32px rgba(0, 0, 0, .35);
+}
+
+.slide__media img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.slide__body {
+    padding: 48px;
+    flex: 1;
+    align-self: center;
+}
+
+.slide__body--full {
+    padding: 48px;
 }
 
 .slide__tag {
@@ -661,13 +725,13 @@ a {
     padding: var(--secao-py) 0;
     overflow: hidden;
     text-align: center;
-    background: var(--terracota);
+    background: var(--sol);
     color: var(--papel);
 }
 
 .cta__bg {
     position: absolute;
-    inset: -30%;
+    inset: -260px;
     background: repeating-conic-gradient(from 0deg, rgba(255, 255, 255, .08) 0deg 6deg, transparent 6deg 12deg);
     will-change: transform;
 }
@@ -763,14 +827,45 @@ a {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 720px) {
     .slide {
-        padding: 32px 24px;
+        flex-direction: column;
+    }
+
+    .slide__media {
+        flex: 0 0 auto;
+    }
+
+    .slide__media img {
+        height: 160px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .slide__body,
+    .slide__body--full {
+        padding: 28px 24px;
     }
 
     .slideshow__viewport {
-        padding: 32px 24px;
+        padding: 0;
     }
+}
+
+/* ==========================================================================
+   REVELAÇÃO AO ROLAR — classes alternadas via JS (mais confiável que
+   estilo inline, porque não depende de timing de execução do script)
+   ========================================================================== */
+.reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity .7s ease, transform .7s ease;
+}
+
+.reveal--visivel {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* respeita usuários que preferem menos movimento */
